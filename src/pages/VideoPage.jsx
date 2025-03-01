@@ -24,6 +24,7 @@ const VideoPage = () => {
   const [relatedVideos, setRelatedVideos] = useState([]);
   const [showPlaylistMenu, setShowPlaylistMenu] = useState(false);
   const [userPlaylists, setUserPlaylists] = useState([]);
+  const [liked, setLiked] = useState(false);
   
   useEffect(() => {
     const videoData = getVideo(id);
@@ -68,6 +69,7 @@ const VideoPage = () => {
     if (!currentUser) return;
     updateVideoLikes(video.id, true);
     setVideo({...video, likes: video.likes + 1});
+    setLiked(true);
   };
   
   const handleDislike = () => {
@@ -110,7 +112,7 @@ const VideoPage = () => {
               onClick={handleLike}
               className="flex items-center mr-2 px-3 py-1 rounded-full hover:bg-yt-light-black"
             >
-              <FaThumbsUp className="mr-1" />
+              <FaThumbsUp className={`mr-1 ${liked ? 'text-blue-600' : ''}`} />
               <span>{formatViews(video.likes)}</span>
             </button>
             
