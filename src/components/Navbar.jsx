@@ -28,7 +28,7 @@ const Navbar = ({ toggleSidebar }) => {
           </button>
           <Link to="/" className="flex items-center">
             <FaYoutube className="text-yt-red text-3xl mr-1" />
-            <span className="font-bold text-xl">YouTube</span>
+            <span className="font-bold text-xl">PandaTube</span>
           </Link>
         </div>
 
