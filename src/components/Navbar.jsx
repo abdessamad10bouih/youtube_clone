@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FaYoutube, FaSearch, FaUserCircle, FaBell, FaVideo } from 'react-icons/fa';
 import { HiMenu } from 'react-icons/hi';
+import { SiFoodpanda } from 'react-icons/si';
 
 const Navbar = ({ toggleSidebar }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -27,7 +28,7 @@ const Navbar = ({ toggleSidebar }) => {
             <HiMenu className="text-xl" />
           </button>
           <Link to="/" className="flex items-center">
-            <FaYoutube className="text-yt-red text-3xl mr-1" />
+            <SiFoodpanda  className="text-yt-red text-2xl mr-2" />
             <span className="font-bold text-xl">PandaTube</span>
           </Link>
         </div>
