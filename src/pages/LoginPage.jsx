@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FaYoutube } from 'react-icons/fa';
+import { SiFoodpanda } from 'react-icons/si';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -26,7 +27,7 @@ const LoginPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-yt-black py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 bg-yt-light-black p-8 rounded-lg">
         <div className="text-center">
-          <FaYoutube className="mx-auto h-12 w-12 text-yt-red" />
+          <SiFoodpanda  className="mx-auto h-12 w-12 text-yt-red" />
           <h2 className="mt-6 text-3xl font-extrabold text-white">Sign in to your account</h2>
           <p className="mt-2 text-sm text-yt-gray">
             Or{' '}
